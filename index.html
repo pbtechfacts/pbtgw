@@ -1,0 +1,234 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PB Typing Gateway — Screen-Reader Accessible Touch Typing Software</title>
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <style>
+    body { font-family: Inter, "Segoe UI", system-ui, -apple-system, sans-serif; }
+    .hc-dark { background-color: #000000 !important; color: #ffffff !important; }
+    .hc-dark .surface { background-color: #111827 !important; border-color: #ffd700 !important; color: #ffffff !important; }
+    .hc-dark .muted { color: #e5e7eb !important; }
+    .hc-dark .badge { background-color: #ffd700 !important; color: #000000 !important; }
+    a:focus, button:focus, summary:focus { outline: 3px solid #f59e0b; outline-offset: 2px; }
+    .hc-dark a:focus, .hc-dark button:focus, .hc-dark summary:focus { outline: 3px solid #00ffff !important; }
+  </style>
+</head>
+<body class="bg-slate-50 text-slate-900 antialiased leading-relaxed">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 bg-blue-700 text-white px-4 py-2 rounded-md font-semibold z-50">
+    Skip to main content
+  </a>
+
+  <header class="bg-slate-950 text-white border-b border-slate-800 sticky top-0 z-40">
+    <div class="max-w-6xl mx-auto px-5 py-4 flex flex-wrap items-center justify-between gap-4">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-lg bg-blue-600 flex items-center justify-center font-extrabold text-lg" aria-hidden="true">PB</div>
+        <div>
+          <p class="text-lg font-bold tracking-tight">PB Typing Gateway</p>
+          <p class="text-xs text-slate-300">By Pogula Bavadesh &bull; PB Tech Facts</p>
+        </div>
+      </div>
+      <nav aria-label="Primary Navigation" class="flex flex-wrap items-center gap-5 text-sm font-medium">
+        <a href="#features" class="hover:text-amber-300 transition-colors">Features</a>
+        <a href="#shortcuts" class="hover:text-amber-300 transition-colors">Shortcuts</a>
+        <a href="#pricing" class="hover:text-amber-300 transition-colors">Pricing</a>
+        <a href="#activate" class="hover:text-amber-300 transition-colors">Activation</a>
+        <a href="#faq" class="hover:text-amber-300 transition-colors">FAQ</a>
+        <button id="hc-toggle" type="button" aria-pressed="false" class="bg-amber-400 text-slate-950 px-3.5 py-1.5 rounded-md font-bold hover:bg-amber-300 transition-colors">
+          High Contrast
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" class="max-w-6xl mx-auto px-5 py-10 space-y-16">
+    <!-- Hero -->
+    <section aria-labelledby="hero-heading" class="surface bg-white border border-slate-200 rounded-2xl p-8 md:p-12 shadow-sm">
+      <div class="grid lg:grid-cols-12 gap-8 items-center">
+        <div class="lg:col-span-8 space-y-5">
+          <span class="badge inline-block bg-blue-100 text-blue-900 text-xs font-bold px-3.5 py-1 rounded-full uppercase tracking-wider">
+            Built for Blind &amp; Visually Impaired Learners
+          </span>
+          <h1 id="hero-heading" class="text-3xl sm:text-5xl font-extrabold tracking-tight leading-tight">
+            Master Touch Typing with Real-Time Voice &amp; Screen-Reader Guidance
+          </h1>
+          <p class="muted text-lg text-slate-700 max-w-2xl">
+            PB Typing Gateway is a fast, offline Windows typing tutor powered by native Windows SAPI5 voice prompts and full NVDA &amp; JAWS compatibility—helping you build speed and accuracy without visual guesswork.
+          </p>
+          <div class="flex flex-wrap gap-4 pt-2">
+            <a href="https://drive.google.com/file/d/1wFfNTAv3me6s_Zt_kV-MjDQPjEVvodRO/view?usp=drivesdk"
+               target="_blank" rel="noopener noreferrer"
+               class="bg-blue-700 hover:bg-blue-800 text-white font-bold px-7 py-3.5 rounded-xl shadow-sm transition-colors">
+              Download for Windows (.exe)
+            </a>
+            <a href="#pricing" class="bg-slate-200 hover:bg-slate-300 text-slate-900 font-semibold px-6 py-3.5 rounded-xl transition-colors">
+              View Launch Offer (₹299)
+            </a>
+          </div>
+          <p class="muted text-sm text-slate-600">
+            Includes a free one-time Stage 0 tactile demo lesson so you can test voice guidance on your PC before purchasing.
+          </p>
+        </div>
+
+        <aside aria-label="Quick Highlights" class="lg:col-span-4 surface bg-slate-900 text-white rounded-xl p-6 space-y-4">
+          <p class="text-sm font-bold uppercase tracking-wider text-amber-300">Why PB Typing Gateway</p>
+          <ul class="space-y-3 text-sm text-slate-200">
+            <li>&#10003; Works seamlessly alongside NVDA &amp; JAWS</li>
+            <li>&#10003; Speaks every next key &amp; finger automatically</li>
+            <li>&#10003; 11 progressive stages + custom `.txt` drills</li>
+            <li>&#10003; Government exam mode (Backspace Lock)</li>
+            <li>&#10003; 100% offline—no account or login needed</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" aria-labelledby="features-heading" class="space-y-6">
+      <div class="space-y-2">
+        <h2 id="features-heading" class="text-2xl sm:text-3xl font-bold">Everything You Need to Type Faster</h2>
+        <p class="muted text-slate-600">Designed from the ground up for keyboard-first navigation and clear spoken feedback.</p>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="surface bg-white border border-slate-200 rounded-xl p-6 space-y-2">
+          <h3 class="font-bold text-lg">Automatic Key-by-Key Voice</h3>
+          <p class="muted text-sm text-slate-700">Announces each next key automatically via Windows SAPI5, with synthesized audio ticks for correct keys and gentle error tones with finger coaching when you miss.</p>
+        </article>
+        <article class="surface bg-white border border-slate-200 rounded-xl p-6 space-y-2">
+          <h3 class="font-bold text-lg">11-Stage Progressive Course</h3>
+          <p class="muted text-sm text-slate-700">Starts with tactile `F` &amp; `J` bump orientation (`Lesson 0`) and advances through Home Row, Top Row, Bottom Row, Capitals, Symbols, Proverbs, and Passages.</p>
+        </article>
+        <article class="surface bg-white border border-slate-200 rounded-xl p-6 space-y-2">
+          <h3 class="font-bold text-lg">Speed &amp; Exam Simulation</h3>
+          <p class="muted text-sm text-slate-700">Practice timed tests (1 to 10 minutes or untimed) with optional Backspace Lock, Strict Error Mode, KPH/WPM tracking, and custom `.txt` file loading.</p>
+        </article>
+        <article class="surface bg-white border border-slate-200 rounded-xl p-6 space-y-2">
+          <h3 class="font-bold text-lg">Weak-Key &amp; Tough Words Drills</h3>
+          <p class="muted text-sm text-slate-700">Automatically identifies your highest-error keys, generates targeted Tough Words drills, and exports your full session history to CSV.</p>
+        </article>
+        <article class="surface bg-white border border-slate-200 rounded-xl p-6 space-y-2">
+          <h3 class="font-bold text-lg">Teacher's Desk &amp; Certificates</h3>
+          <p class="muted text-sm text-slate-700">Manage multiple student profiles on one computer and issue printable HTML Certificates of Success once proficiency targets are achieved.</p>
+        </article>
+        <article class="surface bg-white border border-slate-200 rounded-xl p-6 space-y-2">
+          <h3 class="font-bold text-lg">Customizable Speech &amp; Contrast</h3>
+          <p class="muted text-sm text-slate-700">Switch between Beginner, Intermediate, Word-by-Word, or Speed Test speech modes, adjust TTS speed, and enable WCAG AAA High Contrast themes.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Keyboard Shortcuts -->
+    <section id="shortcuts" aria-labelledby="shortcuts-heading" class="surface bg-white border border-slate-200 rounded-2xl p-6 md:p-8 space-y-4">
+      <h2 id="shortcuts-heading" class="text-2xl font-bold">In-Workspace Keyboard Shortcuts</h2>
+      <div class="overflow-x-auto">
+        <table class="w-full text-left border-collapse text-sm">
+          <thead>
+            <tr class="border-b border-slate-300">
+              <th class="py-2.5 pr-4 font-bold">Shortcut</th>
+              <th class="py-2.5 font-bold">Action</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-slate-200 muted text-slate-700">
+            <tr><td class="py-2.5 pr-4 font-mono font-bold">F2</td><td class="py-2.5">Speak current key along with exact hand, finger, and row</td></tr>
+            <tr><td class="py-2.5 pr-4 font-mono font-bold">F3</td><td class="py-2.5">Speak current word (press twice quickly to spell letter by letter)</td></tr>
+            <tr><td class="py-2.5 pr-4 font-mono font-bold">F4</td><td class="py-2.5">Speak remaining text in the current drill line</td></tr>
+            <tr><td class="py-2.5 pr-4 font-mono font-bold">F5</td><td class="py-2.5">Speak live Net WPM, accuracy percentage, and error count</td></tr>
+            <tr><td class="py-2.5 pr-4 font-mono font-bold">Ctrl + K</td><td class="py-2.5">Toggle Keyboard Explore Mode (press any key to hear its finger placement)</td></tr>
+            <tr><td class="py-2.5 pr-4 font-mono font-bold">Esc</td><td class="py-2.5">Exit Typing Workspace and return to main tabs</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" aria-labelledby="pricing-heading" class="space-y-6">
+      <div class="space-y-2">
+        <h2 id="pricing-heading" class="text-2xl sm:text-3xl font-bold">Transparent Lifetime Pricing</h2>
+        <p class="muted text-slate-600">One-time payment per Windows PC—no recurring monthly fees.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="surface bg-white border-2 border-blue-700 rounded-2xl p-6 space-y-4 shadow-sm">
+          <span class="badge inline-block bg-blue-100 text-blue-900 text-xs font-bold px-2.5 py-1 rounded uppercase">Pilot Offer &bull; First 10 Users</span>
+          <p class="text-4xl font-extrabold">₹299 <span class="text-sm font-normal muted text-slate-600">Lifetime</span></p>
+          <p class="muted text-sm text-slate-700">Full Pro license on 1 Windows PC for our first 10 early-bird learners.</p>
+          <a href="https://wa.me/917396091418" target="_blank" rel="noopener noreferrer" class="block text-center bg-blue-700 hover:bg-blue-800 text-white font-bold py-2.5 rounded-lg">Claim Pilot Offer</a>
+        </div>
+        <div class="surface bg-white border border-slate-200 rounded-2xl p-6 space-y-4">
+          <span class="inline-block bg-slate-100 text-slate-800 text-xs font-bold px-2.5 py-1 rounded uppercase">Standard Pro</span>
+          <p class="text-4xl font-extrabold">₹499 <span class="text-sm font-normal muted text-slate-600">Lifetime</span></p>
+          <p class="muted text-sm text-slate-700">Standard lifetime license after the first 10 pilot seats are filled.</p>
+          <a href="#activate" class="block text-center bg-slate-900 hover:bg-slate-800 text-white font-bold py-2.5 rounded-lg">How to Activate</a>
+        </div>
+        <div class="surface bg-white border-2 border-amber-500 rounded-2xl p-6 space-y-4">
+          <span class="inline-block bg-amber-100 text-amber-900 text-xs font-bold px-2.5 py-1 rounded uppercase">VI YouTube Creators</span>
+          <p class="text-4xl font-extrabold">₹99 <span class="text-sm font-normal muted text-slate-600">+ ₹30/referral</span></p>
+          <p class="muted text-sm text-slate-700">Special creator rate for visually impaired YouTubers who review the software, plus ₹30 per referred buyer.</p>
+          <a href="https://wa.me/917396091418" target="_blank" rel="noopener noreferrer" class="block text-center bg-amber-400 hover:bg-amber-300 text-slate-950 font-bold py-2.5 rounded-lg">Partner With Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Activation Steps -->
+    <section id="activate" aria-labelledby="activate-heading" class="surface bg-white border border-slate-200 rounded-2xl p-6 md:p-8 space-y-4">
+      <h2 id="activate-heading" class="text-2xl font-bold">How to Download &amp; Activate in 4 Steps</h2>
+      <ol class="list-decimal list-inside space-y-2.5 muted text-slate-700">
+        <li>Download and launch <strong>PBTypingGateway.exe</strong> from the button above and try the free Stage 0 demo lesson.</li>
+        <li>Open <strong>4. Teacher's Desk &amp; Licensing</strong> (<code>Ctrl+4</code>) and select <strong>Copy Device ID</strong> (<code>PB-DEV-...</code>).</li>
+        <li>Send your Device ID and payment screenshot directly to Pogula Bavadesh on WhatsApp or Email below.</li>
+        <li>Receive your Device-locked Activation Code promptly after payment verification, paste it into the Activation box, and click <strong>Activate License</strong>.</li>
+      </ol>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" aria-labelledby="faq-heading" class="space-y-4">
+      <h2 id="faq-heading" class="text-2xl font-bold">Frequently Asked Questions</h2>
+      <div class="space-y-3">
+        <details class="surface bg-white border border-slate-200 rounded-xl p-5">
+          <summary class="font-bold cursor-pointer">Does it work with NVDA and JAWS?</summary>
+          <p class="muted text-sm text-slate-700 mt-2">Yes. The interface uses native Windows controls for NVDA/JAWS navigation, while the typing workspace speaks prompts directly through Windows SAPI5 so key-echo never conflicts.</p>
+        </details>
+        <details class="surface bg-white border border-slate-200 rounded-xl p-5">
+          <summary class="font-bold cursor-pointer">Do I need an internet connection to practice?</summary>
+          <p class="muted text-sm text-slate-700 mt-2">No. Once downloaded and activated, PB Typing Gateway runs 100% offline and saves all student progress locally on your PC.</p>
+        </details>
+        <details class="surface bg-white border border-slate-200 rounded-xl p-5">
+          <summary class="font-bold cursor-pointer">Can I share one activation code across multiple PCs?</summary>
+          <p class="muted text-sm text-slate-700 mt-2">No. Each activation code is cryptographically locked to your unique Device ID (<code>PB-DEV-...</code>) for single-PC use.</p>
+        </details>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" aria-labelledby="contact-heading" class="bg-slate-950 text-white rounded-2xl p-8 space-y-3">
+      <h2 id="contact-heading" class="text-2xl font-bold">Official Contact &amp; Security Notice</h2>
+      <p class="text-slate-300 text-sm max-w-2xl">
+        Trust payment QR codes and Activation Codes <strong>only</strong> when sent from these official contacts of Pogula Bavadesh:
+      </p>
+      <div class="flex flex-wrap gap-6 pt-2 text-base font-bold">
+        <a href="https://wa.me/917396091418" target="_blank" rel="noopener noreferrer" class="text-amber-300 hover:underline">
+          WhatsApp: +91 7396091418
+        </a>
+        <a href="mailto:pbtechfacts@gmail.com" class="text-amber-300 hover:underline">
+          Email: pbtechfacts@gmail.com
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="max-w-6xl mx-auto px-5 py-8 text-center text-sm muted text-slate-600">
+    &copy; 2026 PB Typing Gateway &bull; Published by Pogula Bavadesh (PB Tech Facts). All rights reserved.
+  </footer>
+
+  <script>
+    const hcBtn = document.getElementById("hc-toggle");
+    hcBtn.addEventListener("click", () => {
+      const enabled = document.body.classList.toggle("hc-dark");
+      hcBtn.setAttribute("aria-pressed", String(enabled));
+      hcBtn.textContent = enabled ? "Standard Theme" : "High Contrast";
+    });
+  </script>
+</body>
+</html>
+```
